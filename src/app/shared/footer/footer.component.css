@@ -44,6 +44,22 @@
   color: #adb5bd;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 10px;
+}
+.social-links .link {
+  color: #b9c0c7;
+  cursor: pointer;
+  font-size: 23px;
+  transition: all 0.5 ease;
+  &:hover {
+    color: #ef4723;
+  }
+}
 /* Footer Mobile Styles */
 @media (max-width: 768px) {
   .footer {
