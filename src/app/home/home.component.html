@@ -1,0 +1,85 @@
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">Double Zero</h1>
+      <p class="hero-subtitle">Everything`s better when it`s Double</p>
+      <button class="cta-button" (click)="scrollToSection('menu')">
+        Explore Menu
+      </button>
+    </div>
+    <div class="hero-visual">
+      <div class="coffee-cup">
+        <div class="cup-body"></div>
+        <div class="cup-handle"></div>
+        <div class="coffee-steam-hero">
+          <div class="steam-line steam-1"></div>
+          <div class="steam-line steam-2"></div>
+          <div class="steam-line steam-3"></div>
+          <div class="steam-line steam-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-pattern"></div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="menu-section">
+  <div class="container">
+    <h2 class="section-title">Our Menu</h2>
+    <div class="menu-filters">
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter === 'all'"
+        (click)="filterMenu('all')"
+      >
+        All Items
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter === 'coffee'"
+        (click)="filterMenu('coffee')"
+      >
+        Coffee
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter === 'iced'"
+        (click)="filterMenu('iced')"
+      >
+        Iced Coffee
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter === 'drinks'"
+        (click)="filterMenu('drinks')"
+      >
+        Drinks
+      </button>
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter === 'snacks'"
+        (click)="filterMenu('snacks')"
+      >
+        Snacks
+      </button>
+    </div>
+
+    <div class="menu-grid">
+      <div
+        *ngFor="let item of filteredMenuItems"
+        class="menu-item"
+        [attr.data-category]="item.category"
+      >
+        <div class="menu-card">
+          <div class="card-header">
+            <h3>{{ item.name }}</h3>
+            <span class="price">${{ item.price }}</span>
+          </div>
+          <p class="description">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
