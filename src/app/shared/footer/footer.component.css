@@ -81,4 +81,7 @@
   .footer-section h4 {
     font-size: 1.1rem;
   }
+  .social-links {
+    gap: 1.4rem;
+  }
 }
