@@ -18,8 +18,7 @@
   margin-bottom: 2rem;
 }
 
-.footer-section h3,
-.footer-section h4 {
+.footer-section h3 {
   color: #ef4723;
   margin-bottom: 1rem;
 }
@@ -28,8 +27,8 @@
   font-size: 1.5rem;
 }
 
-.footer-section h4 {
-  font-size: 1.2rem;
+.footer-section h3 {
+  font-size: 1.3rem;
 }
 
 .footer-section p {
@@ -48,7 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.7rem;
   margin-bottom: 10px;
 }
 .social-links .link {
@@ -82,6 +81,6 @@
     font-size: 1.1rem;
   }
   .social-links {
-    gap: 1.4rem;
+    gap: 1.3rem;
   }
 }

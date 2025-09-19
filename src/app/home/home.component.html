@@ -57,12 +57,19 @@
       >
         Drinks
       </button>
-      <button
+      <!-- <button
         class="filter-btn"
         [class.active]="activeFilter === 'snacks'"
         (click)="filterMenu('snacks')"
       >
         Snacks
+      </button> -->
+      <button
+        class="filter-btn"
+        [class.active]="activeFilter === 'matcha'"
+        (click)="filterMenu('matcha')"
+      >
+        Matcha
       </button>
     </div>
 
@@ -75,7 +82,7 @@
         <div class="menu-card">
           <div class="card-header">
             <h3>{{ item.name }}</h3>
-            <span class="price">${{ item.price }}</span>
+            <span class="price">{{ item.price }} EGP</span>
           </div>
           <p class="description">{{ item.description }}</p>
         </div>
